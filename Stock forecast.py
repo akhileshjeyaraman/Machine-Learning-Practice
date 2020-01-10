@@ -41,8 +41,8 @@ X_train, X_test, y_train, y_test = model_selection.train_test_split(X, y, test_s
 
 clf = LinearRegression(n_jobs=-1)
 clf.fit(X_train, y_train)
-confidence = clf.score(X_test, y_test)
-print(confidence)
+accuracy = clf.score(X_test, y_test)
+print(accuracy)
 
 forecast_set = clf.predict(X_lately)
 df['Forecast'] = np.nan
